@@ -1,0 +1,11 @@
+name: tee
+
+on:
+  - push
+
+jobs:
+  tee:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "asd" | tee file.txt
+      - run: cat file.txt
